@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Vault Access</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <!-- OTP Input Section -->
+        <div id="otp-section">
+            <h2>Enter Access Code</h2>
+            <p>A 4-digit code has been sent to your device.</p>
+            <div class="otp-inputs">
+                <input type="text" maxlength="1" class="otp-input" />
+                <input type="text" maxlength="1" class="otp-input" />
+                <input type="text" maxlength="1" class="otp-input" />
+                <input type="text" maxlength="1" class="otp-input" />
+            </div>
+            <div class="resend">
+                <a href="#" id="resend-btn">Didn't receive it? Resend</a>
+            </div>
+        </div>
+
+        <!-- Verifying Section -->
+        <div id="verifying-section" class="hidden">
+            <h2>Verifying...</h2>
+            <p>Securely checking your credentials.</p>
+            <div class="loader-circle">
+                <span id="loader-percent">0%</span>
+            </div>
+        </div>
+
+        <!-- Success Section -->
+        <div id="success-section" class="hidden">
+            <h2>Access Granted</h2>
+            <p>Welcome back. Redirecting to your vault...</p>
+            <div class="success-icon">✓</div>
+            <span class="verified-tag">VERIFIED</span>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
